@@ -10,7 +10,7 @@ public class Empleado {
 	public Empleado() {
 		id = cont;
 		nombre = "Sin Nombre";
-		edad = 0;
+		edad = 99;
 		cont++;
 	}
 	
@@ -43,15 +43,16 @@ public class Empleado {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-
-	public String toStringedad() {
-		return "Articulo: "+ id +", edad: "+ edad ;
+	
+	@Override
+	public String toString() {
+		return "Empleado " + nombre + ", edad:" + edad + ", legajo:" + id;
 	}
-	public String toStringnombre() {
-		return "Articulo: "+ id +", Nombre: "+ nombre ;
-	}
-	public String toStringTodo() {
-		return "Articulo: "+ id +", Edad: "+ edad +", Nombre:" + nombre ;
+	
+	public String devuelveProximoID() {
+		return "Proximo ID:" + cont;
 	}
 }
+
+
 
